@@ -1,0 +1,46 @@
+### Create Medicine
+POST http://localhost:3000/api/medicines
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2NhNWJiYjljOTcwODI2NzEyNGI5OWQiLCJlbWFpbCI6ImthcnRoaXNrYW1AZ21haWwuY29tIiwibmFtZSI6Imthcmh0aWNrIiwic2Vzc2lvbklkIjoiNjdjYWEzMmUwODA1N2UyM2VkZTk3YjE5IiwiaWF0IjoxNzQxMzMzMjk0LCJleHAiOjE3NDEzNzY0OTR9.JhPbCsqxoX818jImW65gACB8l63O7UkEG79RMk5o3WI
+
+    { 
+        "name": "test",
+        "description": "testdisce",
+        "type": "oneTimeOnly",  
+        # "recurringType": "daily",
+        "date": "2024-03-07",
+        "time": "10:10 AM"
+        # "endDate": "2024-04-04"
+        # "day": "friday"
+    }
+
+### Get All Medicine
+GET http://localhost:3000/api/medicines
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2NhNWJiYjljOTcwODI2NzEyNGI5OWQiLCJlbWFpbCI6ImthcnRoaXNrYW1AZ21haWwuY29tIiwibmFtZSI6Imthcmh0aWNrIiwic2Vzc2lvbklkIjoiNjdjYTk2Zjc1Nzg1M2Q5YzVjNjQ1ZGM1IiwiaWF0IjoxNzQxMzMwMTY3LCJleHAiOjE3NDEzNzMzNjd9.blHb1n90sT9TNLPS4i2pdAYbSldXswhmdz_cn_D1Ix0
+
+### Get Medicine
+GET http://localhost:3000/api/medicines/67c84af8d0823dfa716d76b4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2NhNWJiYjljOTcwODI2NzEyNGI5OWQiLCJlbWFpbCI6ImthcnRoaXNrYW1AZ21haWwuY29tIiwibmFtZSI6Imthcmh0aWNrIiwic2Vzc2lvbklkIjoiNjdjYTk4YjY5YTlmMzQwMmZjNDVhN2RiIiwiaWF0IjoxNzQxMzMwNjE0LCJleHAiOjE3NDEzNzM4MTR9.nYHmUw-uHYWWSlQ9cdonX0_LU9SCc_qN59Ic0J9fAG0
+
+### Update the Medicine
+PUT http://localhost:3000/api/medicines/67ca740eab19ebf077830af5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2NhNWJiYjljOTcwODI2NzEyNGI5OWQiLCJlbWFpbCI6ImthcnRoaXNrYW1AZ21haWwuY29tIiwiaWF0IjoxNzQxMzI0OTA1LCJleHAiOjE3NDEzMjg1MDV9.qPkwKbCgu5qlNjVxWYM4sl7KJqLbY2BlhmXoUJG-6j8
+    
+    { 
+        "name": "test",
+        "description": "test",
+        "type": "recurring",  
+        "recurringType": "daily",
+        "date": "2025-03-07",
+        "time": "12:00 PM",
+        "endDate": "2025-04-04"
+        # "day": "friday"
+    }
+
+### Update the Medicine
+GET http://localhost:3000/api/medicines/67ca740eab19ebf077830af5/mark-as-done
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2NhNWJiYjljOTcwODI2NzEyNGI5OWQiLCJlbWFpbCI6ImthcnRoaXNrYW1AZ21haWwuY29tIiwiaWF0IjoxNzQxMzI0OTA1LCJleHAiOjE3NDEzMjg1MDV9.qPkwKbCgu5qlNjVxWYM4sl7KJqLbY2BlhmXoUJG-6j8
